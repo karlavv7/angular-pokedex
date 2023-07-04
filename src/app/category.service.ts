@@ -40,4 +40,9 @@ export class CategoryService {
     //return of(this.categories).pipe(delay(5000));
     return this.http.get('https://pokeapi.co/api/v2/type');
   }
+
+  getPokemonDetailsType(id: number): Observable<any> {
+    return this.http.get(`https://pokeapi.co/api/v2/type/${id}`);
+    //'https://pokeapi.co/api/v2/type/' + id;
+  }
 }

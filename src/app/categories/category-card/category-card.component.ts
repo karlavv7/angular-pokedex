@@ -11,13 +11,28 @@ export class CategoryCardComponent implements OnInit {
 
   imageUrl: String;
 
-  ammount: number;
+  categoryType: string;
 
   constructor() {}
 
   ngOnInit(): void {
     console.log('PokemonType', JSON.stringify(this.pokemonType));
-    this.ammount = 234232.253;
     this.imageUrl = `https://ui-avatars.com/api/?font-size=0.33&size=300&name=${this.pokemonType.name}`;
+    //https://pokeapi.co/api/v2/type/4/
+    //https://pokeapi.co/api/v2/type/details/4/
+    //https://pokeapi.co/api/v2/type/4 -> slice(0,-1)
+
+    //https: -> 0
+    //'' -> 1
+    //pokeapi.co ->2
+    //api ->3
+    //v2->4
+    //type->5
+    //4 ->6
+    //this.categoryType = this.pokemonType.url.split('/')[6];
+    https: this.categoryType = this.pokemonType.url
+      .slice(0, -1)
+      .split('/')
+      .pop();
   }
 }
