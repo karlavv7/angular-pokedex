@@ -11,8 +11,7 @@ export class PokemonDetailComponent implements OnInit {
   @Input()
   pokemonDetail: string;
 
-  pokemonName: string;
-  pokemonImageUrl: string;
+  pokemonData: any;
 
   constructor(
     private pokemonService: PokemonService,
@@ -24,10 +23,11 @@ export class PokemonDetailComponent implements OnInit {
       .getPokemonDetails(Number(this.pokemonDetail))
       .subscribe({
         next: (data) => {
-          this.pokemonName = data.name;
-          this.pokemonImageUrl = data.sprites.front_default;
+          //this.pokemonName = data.name;
+          //this.pokemonImageUrl = data.sprites.front_default;
+          this.pokemonData = data;
           console.log(JSON.stringify(data));
-          this.firestore
+          /* this.firestore //Agregar documentos en la colleccion con un Id autogenerado
             .collection('pokemons')
             .add({
               id: data.id,
@@ -38,7 +38,11 @@ export class PokemonDetailComponent implements OnInit {
             })
             .catch((e) => {
               console.log(e);
-            });
+            });*/
+
+          this.firestore.collection('pokemons').doc(data.id.toString()).set({
+            name: data.name,
+          });
         },
       });
   }
