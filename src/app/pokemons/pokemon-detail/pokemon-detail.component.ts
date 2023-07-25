@@ -26,7 +26,7 @@ export class PokemonDetailComponent implements OnInit {
           //this.pokemonName = data.name;
           //this.pokemonImageUrl = data.sprites.front_default;
           this.pokemonData = data;
-          console.log(JSON.stringify(data));
+          //console.log(JSON.stringify(data));
           /* this.firestore //Agregar documentos en la colleccion con un Id autogenerado
             .collection('pokemons')
             .add({

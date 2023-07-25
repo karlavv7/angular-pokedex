@@ -21,7 +21,7 @@ export class StatisticsListComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.statisticsService.connect();
     this.statisticsService.battleStatisticMessage$.subscribe((data) => {
-      console.log(data);
+      //console.log(data);
       let dataObj = JSON.parse(data);
       this.addOrUpdateData(dataObj.winner);
       this.dataList = [...this.dataList];
