@@ -3,12 +3,12 @@ export const environment = {
   pokedexBaseUrl: 'https://pokeapi.co/api/v2',
   pokeStatisticsUrl: 'wss://pokemon-statistics-be19c4542f3c.herokuapp.com/',
   firebase: {
-    apiKey: 'AIzaSyBP6i0xinmSjR3btGkH8imBEICKl1LxXGg',
-    authDomain: 'pokemon-pokedex-780ad.firebaseapp.com',
-    projectId: 'pokemon-pokedex-780ad',
-    storageBucket: 'pokemon-pokedex-780ad.appspot.com',
-    messagingSenderId: '334509035000',
-    appId: '1:334509035000:web:727b51692aeda3fa03da0d',
-    measurementId: 'G-XLV4ZRT6J8',
+    apiKey: "AIzaSyCGHZ2bb801ld1V2nQmqOZ2ueXKx5J87as",
+    authDomain: "pokemon-pokedex-7b7da.firebaseapp.com",
+    projectId: "pokemon-pokedex-7b7da",
+    storageBucket: "pokemon-pokedex-7b7da.appspot.com",
+    messagingSenderId: "1066530652167",
+    appId: "1:1066530652167:web:c33cb7e13a54b58fccaaa2",
+    measurementId: "G-65S9XJC7X7"
   },
 };
